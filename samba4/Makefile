@@ -8,7 +8,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=samba4
-PKG_VERSION:=4.0.25
+PKG_VERSION:=4.0.26
 PKG_RELEASE:=1
 
 PKG_SOURCE_URL:=http://ftp.samba.org/pub/samba \
@@ -162,7 +162,7 @@ CONFIGURE_ARGS += \
 	--with-krb5=$(STAGING_DIR)/usr \
 	--with-ldap \
 	--with-libiconv=$(STAGING_DIR)/usr/lib/libiconv \
-	--with-acl-support \
+	--without-acl-support \
 	--with-quotas \
 	--with-syslog \
 	--with-shared-modules=pdb_tdbsam,pdb_wbc_sam,idmap_nss,nss_info_template,auth_winbind,auth_wbc,auth_domain,vfs \
